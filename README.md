@@ -3,4 +3,4 @@
 ## Proyecto ficticio y sin fines comerciales. Imágenes generadas por IA en Adobe Firefly. Desarrollado por 
 > _Alura Latam_ &  _MadTech_. :shipit:
 
-![Logo-MadTech](./imagenes/logoblanco.png)
+![Logo-MadTech](./imagenes/logomt1.png)
