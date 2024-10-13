@@ -1,3 +1,3 @@
 # Fokus
 
-### Proyecto ficticio y sin fines comerciales. Imágenes generadas por IA en Adobe Firefly. Desarrollado por Alura Latam &  MadTech.
+### Proyecto ficticio y sin fines comerciales. Imágenes generadas por IA en Adobe Firefly. Desarrollado por _Alura Latam_ &  _MadTech_.
