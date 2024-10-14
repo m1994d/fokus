@@ -227,41 +227,6 @@ h1, h2, h3, h4, h5, h6 {
     visibility: hidden;
 }
 
-/*Contador o cronometro*/
-
-.cronometro-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--fundo-card-timer) /* Fondo oscuro para resaltar el cronómetro */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    margin: 20px auto;
-    width: 200px; /* Ajusta el ancho según sea necesario */
-}
-
-.cronometro-container h2 {
-    color: #f1f1f1;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-#cronometro-display {
-    color: #ffffff; /* Letra blanca */
-    font-size: 2.5rem; /* Tamaño de letra más grande */
-    font-weight: bold;
-    text-align: center;
-    background-color: var(--fundo-card-timer) /* Fondo más oscuro */
-    padding: 10px 20px;
-    border-radius: 5px;
-    width: 100%; /* Hace que ocupe todo el ancho */
-    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-
 /* fim - toggle */
 
 /* Para Tablets */
