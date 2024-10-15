@@ -16,7 +16,7 @@ const audioPlay = new Audio('./sonidos/play.wav');
 const audioPausa = new Audio('./sonidos/pause.mp3');
 const audioTiempoFinalizado = new Audio('./sonidos/beep.mp3');
 
-let tiempoTranscurridoEnSegundos = 1500;
+let tiempoTranscurridoEnSegundos = 5;
 let idIntervalo = null;
 
 musica.loop = true;
@@ -30,26 +30,21 @@ inputMusicaEnfoque.addEventListener('change', () => {
 });
 
 botonEnfoque.addEventListener('click', () => {
-    tiempoTranscurridoEnSegundos = 1500;
     cambiarContexto('enfoque');
     botonEnfoque.classList.add('active');
 });
 
 botonCorto.addEventListener('click', () => {
-    tiempoTranscurridoEnSegundos = 300;
     cambiarContexto('descanso-corto');
     botonCorto.classList.add('active');
 });
 
 botonLargo.addEventListener('click', () => {
-    tiempoTranscurridoEnSegundos = 900;
     cambiarContexto('descanso-largo');
     botonLargo.classList.add('active');
 });
 
 function cambiarContexto(contexto) {
-
-    mostrarTiempo()
     botones.forEach(function (botonContexto){
         botonContexto.classList.remove('active');
     });
@@ -84,10 +79,8 @@ const cuentaRegresiva = () => {
         reiniciar();
         return;
     }
-    textoIniciarPausar.textContent = "Pausar";
-    iconoIniciarPausar.setAttribute("src", `/imagenes/pause.png`);
     tiempoTranscurridoEnSegundos -= 1;
-    mostrarTiempo()
+    console.log('Temporizador: ' + tiempoTranscurridoEnSegundos)
 
 };
 
@@ -106,15 +99,7 @@ function iniciarOpausar() {
 
 function reiniciar() {
     clearInterval(idIntervalo);
-    textoIniciarPausar.textContent = "Comenzar";
-    iconoIniciarPausar.setAttribute("src", `/imagenes/play_arrow.png`)
     idIntervalo = null;
 }
 
-function mostrarTiempo(){
-    const tiempo = new Date(tiempoTranscurridoEnSegundos * 1000 )
-    const tiempoFormateado = tiempo.toLocaleTimeString('es-CO', {minute: '2-digit', second: '2-digit'});
-    tiempoEnPantalla.innerHTML = `${tiempoFormateado}`
-}
 
-mostrarTiempo()
